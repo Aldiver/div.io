@@ -1,21 +1,24 @@
-import './App.css'
-import Intro from './components/Intro';
-import Portfolio from './components/Portfolio';
-import Timeline from './components/Timeline';
-import Contact from './components/Contact';
+import "./App.css";
+import { Contact } from "./pages/index/Contact";
+import { Hero } from "./pages/index/Hero";
+import { Portfolio } from "./pages/index/Portfolio";
 
 function App() {
-
   return (
-    <div className='App'>
-      <div className='max-w-5xl w-11/12 mx-auto'>
-        <Intro />
-        <Portfolio />
-        <Timeline />
-        <Contact />
+    <section>
+      <div className="overflow-y-scroll h-screen scroll-snap-y-mandatory">
+        <div className="scroll-snap-align-start">
+          <Hero />
+        </div>
+        <div className="scroll-snap-align-start">
+          <Portfolio />
+        </div>
+        <div className="scroll-snap-align-start">
+          <Contact />
+        </div>
       </div>
-    </div>
-  )
+    </section>
+  );
 }
 
-export default App
+export default App;
